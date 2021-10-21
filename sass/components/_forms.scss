@@ -1,0 +1,248 @@
+// ._backdrop
+._backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  @include add-size(100%, 100%);
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 0.2s;
+}
+
+.modal {
+  // .modal_container
+  &_container {
+    margin: 0 auto;
+  }
+
+  // .modal__order
+  &__order {
+    @include сentering-xy(fixed);
+    @include add-size(528px, 581px);
+    background: #ffffff;
+    box-shadow: collection-shadows(modal-shadow);
+    border-radius: 4px;
+    padding: 40px 40px;
+  }
+
+  // .modal__form
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .modal__title
+  &__title {
+    @include font-modify(#212121, 20, 700, 0.03em, 23);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  // .modal__checkbox
+  &__checkbox {
+    &:checked ~ .form__label--checkbox::before {
+      border: 2px solid collection-color(action-color);
+      border-radius: 2px;
+      background-color: collection-color(action-color);
+      background-image: url(../images/control/vector-check.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+.form {
+  // .form__list
+  &__list {
+    .form__item:not(:last-child) {
+      margin-bottom: 28px;
+    }
+    .form__item:last-child {
+      margin-bottom: 29px;
+    }
+  }
+
+  // .form__item
+  &__item {
+  }
+
+  // .form__field
+  &__field {
+    position: relative;
+    &:focus-within > .form__icon {
+      fill: collection-color(action-color);
+    }
+  }
+
+  // .form__input
+  &__input {
+    @include add-size(100%, 40px);
+    padding-left: 42px;
+    color: #757575;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+    &:focus {
+      outline-color: collection-color(action-color);
+      color: #757575;
+    }
+  }
+
+  // .form__label
+  &__label {
+    position: absolute;
+    top: -29px;
+    left: 0;
+
+    @include font-modify(#757575, 12, 400, 0.01em, 14);
+  }
+
+  // .form__icon
+  &__icon {
+    position: absolute;
+    display: block;
+    top: 70%;
+    left: 12px;
+    transform: translateY(-64%);
+  }
+
+  // .form__field--checkbox
+  &__field--checkbox {
+    margin: 0 auto;
+  }
+
+  // .form__label--checkbox
+  &__label--checkbox {
+    @include font-modify(#757575, 14, 400, 0.03em, 24);
+    cursor: pointer;
+    &::before {
+      content: " ";
+      display: inline-block;
+      vertical-align: -11%;
+      @include add-size(16px, 15px);
+      border: 2px solid #212121;
+      border-radius: 2px;
+      margin-right: 8px;
+      cursor: pointer;
+      transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+
+  // .form__submit-btn
+  &__submit-btn {
+    margin: 0 auto;
+    cursor: pointer;
+    &:disabled {
+      background-color: #757575;
+    }
+    &:active {
+      background-color: collection-color(btn-active-color);
+    }
+  }
+}
+
+.comment {
+  @include add-size(100%, 120px);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 12px 16px;
+  resize: none;
+  &::placeholder {
+    @include font-modify(rgba(117, 117, 117, 0.5), 12, 400, 0.01em, 14);
+  }
+  & ~ .form__label {
+    top: -124px;
+  }
+  &:focus {
+    outline-color: collection-color(action-color);
+    color: #757575;
+  }
+}
+.checkbox-link {
+  display: inline;
+  @include font-modify(#{collection-color(action-color)}, 14, 400, 0.03em, 24);
+  text-decoration-line: underline;
+}
+
+.btn-close {
+  position: absolute;
+  top: 7px;
+  right: 6px;
+  @include add-size(30px, 30px);
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  cursor: pointer;
+  .icon {
+    fill: #000;
+  }
+  &:hover {
+    .icon {
+      fill: collection-color(action-color);
+    }
+  }
+}
+
+.subscr-email {
+  margin: 71px 0 0 92px;
+
+  // .subscr-email__title
+  &__title {
+    color: #ffff;
+    margin-bottom: 20px;
+  }
+
+  // .subscr-email__form
+  &__form {
+  }
+
+  // .subscr-email__field
+  &__field {
+  }
+
+  // .subscr-email__input
+  &__input {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding: 14.8px 0;
+
+    @include font-modify(currentColor, 16, 400, 0.03em, 20);
+
+    width: 358px;
+    margin-right: 12px;
+    &::placeholder {
+      font-size: 16px;
+      line-height: calc(20 / 16);
+      letter-spacing: 0.03em;
+      padding-left: 16px;
+    }
+  }
+
+  // .subscr-email__label
+  &__label {
+  }
+
+  // .subscr-email__btn
+  &__btn {
+    @extend ._flex-center;
+    @include font-modify(#ffff, 16, 700, 0.06em, 30);
+    &:active {
+      background-color: collection-color(btn-active-color);
+    }
+  }
+
+  // .subscr-email__icon
+  &__icon {
+    margin-left: 10px;
+    color: #ffff;
+  }
+}
+.btn-icon {
+  fill: currentColor;
+}
