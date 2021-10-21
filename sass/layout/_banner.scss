@@ -1,0 +1,22 @@
+.banner {
+  margin: 0 auto;
+  background-color: collection-color(banner-bg-color);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background.jpg");
+  @include background-pos();
+  padding: 201px 0;
+  text-align: center;
+
+  // .banner__title
+  &__title {
+    padding: 0 23%;
+    margin: 0 0 30px 0;
+  }
+
+  // .banner__order-btn
+  &__order-btn {
+    @extend .button;
+    &:active {
+      background-color: collection-color(btn-active-color);
+    }
+  }
+}
