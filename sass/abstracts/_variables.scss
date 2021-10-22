@@ -4,11 +4,10 @@ $collection-colors: (
   "team-bg-color": #f5f4fa,
   "footer-bg-color": #2f303a,
   "action-color": #2196f3,
-  "btn-active-color": #188CE8,
+  "btn-active-color": #188ce8,
   "section-title-color": #212121,
   "common-text-color": #757575,
   "social--link--color": #afb1b8,
-
 );
 
 $collection-shadows: (
@@ -27,3 +26,9 @@ $collection-gaps: (
   "card-set-gap": 30px,
   "card-respons-set-gap": 30px,
 );
+
+$mobile: 480px;
+$to-tablet: 767px;
+$tablet: 768px;
+$to-desktop: 1199px;
+$desktop: 1200px;
