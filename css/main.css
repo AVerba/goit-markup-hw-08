@@ -277,7 +277,7 @@ body {
 }
 
 .form__submit-btn:active {
-  background-color: #188CE8;
+  background-color: #188ce8;
 }
 
 .comment {
@@ -425,7 +425,7 @@ body {
 }
 
 .subscr-email__btn:active {
-  background-color: #188CE8;
+  background-color: #188ce8;
 }
 
 .subscr-email__icon {
@@ -699,7 +699,7 @@ h3 {
 }
 
 .banner__order-btn:active {
-  background-color: #188CE8;
+  background-color: #188ce8;
 }
 
 .respons__list {
@@ -787,12 +787,19 @@ h3 {
 }
 
 .team__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  /*     display: flex;
+    justify-content: space-between; */
+}
+
+@media (min-width: 1200px) {
+  .team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .team__item {

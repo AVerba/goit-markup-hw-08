@@ -6,8 +6,15 @@
 
   // .team__list
   &__list {
-    display: flex;
-    justify-content: space-between;
+    @include for-size(tablet) {
+    }
+
+    @include for-size(desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
+    /*     display: flex;
+    justify-content: space-between; */
   }
 
   // .team__item
