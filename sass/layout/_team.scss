@@ -6,23 +6,45 @@
 
   // .team__list
   &__list {
-    @include for-size(tablet) {
+    @include for-size(tablet and to-desktop) {
+      display: flex;
+      flex-wrap: wrap;
     }
 
     @include for-size(desktop) {
       display: flex;
       justify-content: space-between;
     }
-    /*     display: flex;
-    justify-content: space-between; */
   }
 
   // .team__item
   &__item {
-    max-width: calc(100% / 3 - #{collection-gaps(card-set-gap)});
+    max-width: 100%;
+    margin: 0 auto;
     background-color: #ffff;
     box-shadow: collection-shadows(modal-shadow);
     border-radius: 0px 0px 4px 4px;
+    @include for-size(tablet) {
+      max-width: calc(100% / 2 - #{collection-gaps(card-set-gap)});
+    }
+
+    @include for-size(desktop) {
+      max-width: calc(100% / 3 - #{collection-gaps(card-set-gap)});
+    }
+    &:not(:last-child) {
+      @include for-size(to-tablet) {
+        margin-bottom: 30px;
+      }
+
+      @include for-size(desktop) {
+        margin-right: 30px;
+      }
+    }
+    &:not(:nth-last-child(-n + 2)) {
+      @include for-size(tablet and to-desktop) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   // .team__img
