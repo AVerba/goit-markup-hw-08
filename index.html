@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="wrapper">
-<!--         <header class="header">
+        <header class="header">
             <div class="container _flex-center">
                 <a href="./index.html" class="header__logo logo">Web<span>Studio</span></a>                                
                 <nav class="header__menu menu">
@@ -28,20 +28,20 @@
                     <li>
                         <a href="mailto:info@devstudio.com" class="contacts__link">
                             <svg class="icon" width="16" height="12">
-                                <use xlink:href="./images/icons.svg#mail"></use>
+                                <use xlink:href="./images/icons/icons.svg#mail"></use>
                             </svg>
                             info@devstudio.com</a>
                     </li>
                     <li>
                         <a href="tel:+380961111111" class="contacts__link">
                             <svg class="icon"  width="10" height="16" >
-                                <use xlink:href="./images/icons.svg#phone"></use>
+                                <use xlink:href="./images/icons/icons.svg#phone"></use>
                             </svg>
                             +38 096 111 11 11</a>
                     </li>
                 </ul> 
             </div>
-        </header> -->
+        </header>
         <main class="page">
 <!--             <section class="banner">
                 <div class="container">
@@ -92,25 +92,58 @@
                     </ul>
                 </div>
             </section> -->
-<!--             <section class="page__tastks tasks section">
+            <section class="page__tastks tasks section">
                 <div class="container">
                     <h2 class="tasks__title sub-title">Чем мы занимаемся</h2>
                     <ul class="tasks__list">
                         <li class="tasks__item">
-                            <img class="_img" src="./images/tasks/create.jpg" alt="Разработка ПО">
+                            <picture>
+                                <source srcset="
+                                            ./images/desktop/tasks/create.webp 1x, 
+                                            ./images/desktop/tasks/create@2x.webp 2x"
+                                        type="image/webp" 
+                                        media="(min-width: 1200px)">                                
+                                <source srcset="
+                                            ./images/desktop/tasks/create.jpg 1x, 
+                                            ./images/desktop/tasks/create@2x.jpg 2x"
+                                         media="(min-width: 1200px)">                              
+                                <img class="_img" src="./images/desktop/tasks/create.jpg" alt="Разработка ПО">   
+                            </picture>
                             <p class="label">десктопные приложения</p>
                         </li>
                         <li class="tasks__item">
-                            <img class="_img" src="./images/tasks/support.jpg" alt="Поддержка клиентов">
+                            <picture>
+                                <source srcset="
+                                            ./images/desktop/tasks/support.webp 1x, 
+                                            ./images/desktop/tasks/support@2x.webp 2x"
+                                        type="image/webp" 
+                                        media="(min-width: 1200px)">                                
+                                <source srcset="
+                                            ./images/desktop/tasks/support.jpg 1x, 
+                                            ./images/desktop/tasks/support@2x.jpg 2x"
+                                         media="(min-width: 1200px)">                              
+                                <img class="_img" src="./images/desktop/tasks/support.jpg" alt="Поддержка клиентов">   
+                            </picture>
                             <p class="label">мобильные приложения</p>
                         </li>
                         <li class="tasks__item">
-                            <img class="_img" src="./images/tasks/design.jpg" alt="Современный дизайн">
+                            <picture>
+                                <source srcset="
+                                            ./images/desktop/tasks/design.webp 1x, 
+                                            ./images/desktop/tasks/design@2x.webp 2x"
+                                        type="image/webp" 
+                                        media="(min-width: 1200px)">                                
+                                <source srcset="
+                                            ./images/desktop/tasks/design.jpg 1x, 
+                                            ./images/desktop/tasks/design@2x.jpg 2x"
+                                         media="(min-width: 1200px)">                              
+                                <img class="_img" src="./images/desktop/tasks/design.jpg" alt="Современный дизайн">   
+                            </picture>                            
                             <p class="label">дизайнерские решения</p>
                         </li>
                     </ul>
                 </div>
-            </section> -->
+            </section>
             <section class="page__team team section">
                 <div class="container">
                     <h2 class="team__title sub-title">Наша команда</h2>
@@ -158,28 +191,28 @@
                                     <li class="social__link">
                                         <a href="https://instagram.com" target="_blank" rel="noreferrer noopener">
                                             <svg class="icon" width="20" height="20">
-                                                <use xlink:href="./images/icons.svg#instagram"></use>
+                                                <use xlink:href="./images/icons/icons.svg#instagram"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="social__link">
                                         <a href="https://twitter.com" target="_blank" rel="noreferrer noopener">
                                             <svg class="icon" width="20" height="20">
-                                                <use xlink:href="./images/icons.svg#twitter"></use>
+                                                <use xlink:href="./images/icons/icons.svg#twitter"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="social__link">
                                         <a href="https://facebook.com" target="_blank" rel="noreferrer noopener">
                                             <svg class="icon" width="20" height="20">
-                                                <use xlink:href="./images/icons.svg#facebook"></use>
+                                                <use xlink:href="./images/icons/icons.svg#facebook"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="social__link">
                                         <a href="https://linkedin.com" target="_blank" rel="noreferrer noopener">
                                             <svg class="icon" width="20" height="20">
-                                                <use xlink:href="./images/icons.svg#linkedin"></use>
+                                                <use xlink:href="./images/icons/icons.svg#linkedin"></use>
                                             </svg>
                                         </a>
                                     </li>
@@ -229,28 +262,28 @@
                                     <li class="social__link">
                                         <a href="https://instagram.com" target="_blank" rel="noreferrer noopener">
                                             <svg class="icon" width="20" height="20">
-                                                <use xlink:href="./images/icons.svg#instagram"></use>
+                                                <use xlink:href="./images/icons/icons.svg#instagram"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="social__link">
                                         <a href="https://twitter.com" target="_blank" rel="noreferrer noopener">
                                             <svg class="icon" width="20" height="20">
-                                                <use xlink:href="./images/icons.svg#twitter"></use>
+                                                <use xlink:href="./images/icons/icons.svg#twitter"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="social__link">
                                         <a href="https://facebook.com" target="_blank" rel="noreferrer noopener">
                                             <svg class="icon" width="20" height="20">
-                                                <use xlink:href="./images/icons.svg#facebook"></use>
+                                                <use xlink:href="./images/icons/icons.svg#facebook"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="social__link">
                                         <a href="https://linkedin.com" target="_blank" rel="noreferrer noopener">
                                             <svg class="icon" width="20" height="20">
-                                                <use xlink:href="./images/icons.svg#linkedin"></use>
+                                                <use xlink:href="./images/icons/icons.svg#linkedin"></use>
                                             </svg>
                                         </a>
                                     </li>
@@ -300,28 +333,28 @@
                                     <li class="social__link">
                                         <a href="https://instagram.com" target="_blank" rel="noreferrer noopener">
                                             <svg class="icon" width="20" height="20">
-                                                <use xlink:href="./images/icons.svg#instagram"></use>
+                                                <use xlink:href="./images/icons/icons.svg#instagram"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="social__link">
                                         <a href="https://twitter.com" target="_blank" rel="noreferrer noopener">
                                             <svg class="icon" width="20" height="20">
-                                                <use xlink:href="./images/icons.svg#twitter"></use>
+                                                <use xlink:href="./images/icons/icons.svg#twitter"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="social__link">
                                         <a href="https://facebook.com" target="_blank" rel="noreferrer noopener">
                                             <svg class="icon" width="20" height="20">
-                                                <use xlink:href="./images/icons.svg#facebook"></use>
+                                                <use xlink:href="./images/icons/icons.svg#facebook"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="social__link">
                                         <a href="https://linkedin.com" target="_blank" rel="noreferrer noopener">
                                             <svg class="icon" width="20" height="20">
-                                                <use xlink:href="./images/icons.svg#linkedin"></use>
+                                                <use xlink:href="./images/icons/icons.svg#linkedin"></use>
                                             </svg>
                                         </a>
                                     </li>
@@ -371,28 +404,28 @@
                                     <li class="social__link">
                                         <a href="https://instagram.com" target="_blank" rel="noreferrer noopener">
                                             <svg class="icon" width="20" height="20">
-                                                <use xlink:href="./images/icons.svg#instagram"></use>
+                                                <use xlink:href="./images/icons/icons.svg#instagram"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="social__link">
                                         <a href="https://twitter.com" target="_blank" rel="noreferrer noopener">
                                             <svg class="icon" width="20" height="20">
-                                                <use xlink:href="./images/icons.svg#twitter"></use>
+                                                <use xlink:href="./images/icons/icons.svg#twitter"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="social__link">
                                         <a href="https://facebook.com" target="_blank" rel="noreferrer noopener">
                                             <svg class="icon" width="20" height="20">
-                                                <use xlink:href="./images/icons.svg#facebook"></use>
+                                                <use xlink:href="./images/icons/icons.svg#facebook"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="social__link">
                                         <a href="https://linkedin.com" target="_blank" rel="noreferrer noopener">
                                             <svg class="icon" width="20" height="20">
-                                                <use xlink:href="./images/icons.svg#linkedin"></use>
+                                                <use xlink:href="./images/icons/icons.svg#linkedin"></use>
                                             </svg>
                                         </a>
                                     </li>

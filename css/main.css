@@ -38,7 +38,7 @@ address {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-._flex-center, .subscr-email__btn, .social__link, .team__content {
+._flex-center, .subscr-email__btn, .social__list, .social__link, .team__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,19 +125,19 @@ body {
   margin-right: auto;
 }
 
-@media (min-width: 480px) {
+@media screen and (min-width: 480px) {
   .container {
     width: 480px;
   }
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .container {
     width: 750px;
   }
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .container {
     width: 1182px;
   }
@@ -571,6 +571,12 @@ h3 {
   margin-right: 93px;
 }
 
+@media screen and (max-width: 1199px) {
+  .header__logo {
+    margin-right: 88px;
+  }
+}
+
 .header__logo span {
   color: #000;
 }
@@ -580,27 +586,30 @@ h3 {
 }
 
 .header__contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-left: auto;
 }
 
-.header__contacts li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header__contacts li + li {
-  margin-left: 20px;
-}
-
-.header__contacts li a {
-  margin-left: 10px;
+@media screen and (min-width: 1200px) {
+  .header__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+  }
+  .header__contacts li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__contacts li + li {
+    margin-left: 20px;
+  }
+  .header__contacts li a {
+    margin-left: 10px;
+  }
 }
 
 .menu__list {
@@ -761,49 +770,51 @@ h3 {
 }
 
 .tasks {
-  padding-top: 2px;
+  display: none;
 }
 
-.tasks__title {
-  margin-bottom: 50px;
-}
-
-.tasks__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.tasks__list li:not(:first-child) {
-  margin-left: 30px;
-}
-
-.tasks__item {
-  position: relative;
-}
-
-.tasks__item .label {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: 27px 0;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  line-height: calc(16 / 14);
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  background: rgba(47, 48, 58, 0.8);
+@media screen and (min-width: 1200px) {
+  .tasks {
+    display: block;
+    padding-top: 2px;
+  }
+  .tasks__title {
+    margin-bottom: 50px;
+  }
+  .tasks__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .tasks__list li:not(:first-child) {
+    margin-left: 30px;
+  }
+  .tasks__item {
+    position: relative;
+  }
+  .tasks__item .label {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 27px 0;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    line-height: calc(16 / 14);
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: rgba(47, 48, 58, 0.8);
+  }
 }
 
 .team__title {
   margin-bottom: 50px;
 }
 
-@media (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .team__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -813,7 +824,7 @@ h3 {
   }
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .team__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -833,31 +844,32 @@ h3 {
   border-radius: 0px 0px 4px 4px;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .team__item {
     max-width: calc(100% / 2 - 30px);
+    /* flex-basis: 50%; */
   }
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .team__item {
     max-width: calc(100% / 3 - 30px);
   }
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .team__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .team__item:not(:last-child) {
     margin-right: 30px;
   }
 }
 
-@media (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .team__item:not(:nth-last-child(-n + 2)) {
     margin-bottom: 30px;
   }
