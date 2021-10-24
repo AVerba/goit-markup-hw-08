@@ -14,6 +14,7 @@
   // .social__list
   &__list {
     display: flex;
+    @extend ._flex-center;
     li:not(:first-child) {
       margin-left: 10px;
     }

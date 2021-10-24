@@ -26,6 +26,7 @@
     border-radius: 0px 0px 4px 4px;
     @include for-size(tablet) {
       max-width: calc(100% / 2 - #{collection-gaps(card-set-gap)});
+     /* flex-basis: 50%; */
     }
 
     @include for-size(desktop) {

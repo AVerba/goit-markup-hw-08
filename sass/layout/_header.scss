@@ -22,7 +22,12 @@
 
   // .header__logo
   &__logo {
+    @include for-size(to-desktop) {
+      margin-right: 88px;
+    }
+
     margin-right: 93px;
+
     span {
       color: #000;
     }
@@ -33,19 +38,22 @@
 
   // .header__contacts
   &__contacts {
-    display: flex;
     margin-left: auto;
-
-    // .header__contacts li
-    li {
+    @include for-size(desktop) {
       display: flex;
-      align-items: center;
-    }
-    li + li {
-      margin-left: 20px;
-    }
-    li a {
-      margin-left: 10px;
+      margin-left: auto;
+  
+      // .header__contacts li
+      li {
+        display: flex;
+        align-items: center;
+      }
+      li + li {
+        margin-left: 20px;
+      }
+      li a {
+        margin-left: 10px;
+      }
     }
   }
 }
