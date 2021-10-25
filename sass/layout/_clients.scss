@@ -14,7 +14,7 @@
 
   // .clients__list
   &__list {
-    padding: 0 15px;
+    /* padding: 0 15px; */
     @include for-size(tablet and to-desktop) {
       display: flex;
       flex-wrap: wrap;
@@ -31,13 +31,14 @@ display: flex;
   &__item {
     border: 1px solid #afb1b8;
     border-radius: 4px;
-   /*  width: calc((100% - 30px * 5) / 6); */
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
     height: 92px;
 
-    @include for-size(to-tablet) {
+/*     @include for-size(tablet) {
       width: calc((100% - 4 * 15px) / 2);
       margin: 15px;
-    }
+    } */
     @include for-size(tablet) {
       width: calc((100% - 6 * 15px) / 3);
       margin: 15px;
