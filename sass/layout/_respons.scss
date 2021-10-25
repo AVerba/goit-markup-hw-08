@@ -1,17 +1,28 @@
 .respons {
   // .respons__list
   &__list {
-    display: flex;
-    margin-left: calc(-1 * collection-gaps(card-respons-set-gap));
-    li + li {
-      margin-left: 30px;
+    @include for-size(tablet and to-desktop) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @include for-size(desktop) {
+      display: flex;
+      margin-left: calc(-1 * collection-gaps(card-respons-set-gap));
+      li + li {
+        margin-left: 30px;
+      }
     }
   }
 
   // .respons__item
   &__item {
-    flex-basis: calc(100% / 3 - #{collection-gaps(card-respons-set-gap)});
-    margin-left: collection-color(card-respons-set-gap);
+    @include for-size(tablet) {
+      width: calc((100% - #{collection-gaps(card-respons-set-gap)}) / 2);
+    }
+    @include for-size(desktop) {
+      flex-basis: calc(100% / 3 - #{collection-gaps(card-respons-set-gap)});
+      margin-left: collection-color(card-respons-set-gap);
+    }
     h3 {
       text-align: left;
       margin-bottom: 10px;
