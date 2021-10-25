@@ -25,12 +25,11 @@
     box-shadow: collection-shadows(modal-shadow);
     border-radius: 0px 0px 4px 4px;
     @include for-size(tablet) {
-      max-width: calc(100% / 2 - #{collection-gaps(card-set-gap)});
-     /* flex-basis: 50%; */
+      width: calc((100% - #{collection-gaps(card-set-gap)}) / 2);
     }
 
     @include for-size(desktop) {
-      max-width: calc(100% / 3 - #{collection-gaps(card-set-gap)});
+      width: calc((100% - #{collection-gaps(card-set-gap)}) / 4);
     }
     &:not(:last-child) {
       @include for-size(to-tablet) {
