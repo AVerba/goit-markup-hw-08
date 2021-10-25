@@ -6,6 +6,7 @@
   margin-right: auto;
   @include for-size(mobile) {
     width: 480px;
+    /*  display: block; */
   }
 
   @include for-size(tablet) {

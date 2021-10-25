@@ -128,6 +128,7 @@ body {
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
+    /*  display: block; */
   }
 }
 
@@ -468,12 +469,22 @@ body {
 /* H1 */
 h1 {
   color: #ffff;
-  font-size: 44px;
+  font-size: 26px;
   font-weight: 900;
   letter-spacing: 0.06em;
-  line-height: calc(60 / 44);
+  line-height: calc(42 / 26);
   text-align: center;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    color: #ffff;
+    font-size: 44px;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    line-height: calc(60 / 44);
+  }
 }
 
 /* H2 */
@@ -568,12 +579,22 @@ h3 {
 }
 
 .header__logo {
-  margin-right: 93px;
+  margin: 16px 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  /* margin-right: 93px; */
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .header__logo {
     margin-right: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    margin-right: 93px;
   }
 }
 
@@ -586,7 +607,14 @@ h3 {
 }
 
 .header__contacts {
+  display: none;
   margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .header__contacts {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -609,6 +637,16 @@ h3 {
   }
   .header__contacts li a {
     margin-left: 10px;
+  }
+}
+
+.menu {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: block;
   }
 }
 
@@ -715,8 +753,19 @@ h3 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 201px 0;
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .banner {
+    padding: 118px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .banner {
+    padding: 201px 0;
+  }
 }
 
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
@@ -757,6 +806,12 @@ h3 {
 .banner__title {
   padding: 0 23%;
   margin: 0 0 30px 0;
+}
+
+@media screen and (max-width: 767px) {
+  .banner__title {
+    padding: 0 10%;
+  }
 }
 
 .banner__order-btn:active {

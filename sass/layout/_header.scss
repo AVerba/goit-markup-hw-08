@@ -22,11 +22,16 @@
 
   // .header__logo
   &__logo {
-    @include for-size(to-desktop) {
+    margin: 16px 0;
+    align-items: flex-start;
+    @include for-size(tablet) {
       margin-right: 88px;
     }
+    @include for-size(desktop) {
+      margin-right: 93px;
+    }
 
-    margin-right: 93px;
+    /* margin-right: 93px; */
 
     span {
       color: #000;
@@ -38,11 +43,16 @@
 
   // .header__contacts
   &__contacts {
+    display: none;
     margin-left: auto;
+    @include for-size(tablet) {
+      display: block;
+    }
+
     @include for-size(desktop) {
       display: flex;
       margin-left: auto;
-  
+
       // .header__contacts li
       li {
         display: flex;
@@ -59,6 +69,10 @@
 }
 
 .menu {
+  display: none;
+  @include for-size(tablet) {
+    display: block;
+  }
   // .menu__list
   &__list {
     display: flex;
