@@ -4,6 +4,7 @@
     @include for-size(tablet and to-desktop) {
       display: flex;
       flex-wrap: wrap;
+      margin: -15px;
     }
     @include for-size(desktop) {
       display: flex;
@@ -17,7 +18,8 @@
   // .respons__item
   &__item {
     @include for-size(tablet) {
-      width: calc((100% - #{collection-gaps(card-respons-set-gap)}) / 2);
+      width: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
     }
     @include for-size(desktop) {
       flex-basis: calc(100% / 3 - #{collection-gaps(card-respons-set-gap)});
@@ -28,7 +30,13 @@
       margin-bottom: 10px;
     }
     p {
-      @include font-modify(collection-color(common-text-color), 14, 400, 0.03em, 24);
+      @include font-modify(
+        collection-color(common-text-color),
+        14,
+        400,
+        0.03em,
+        24
+      );
       text-align: left;
     }
   }

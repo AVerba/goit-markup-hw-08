@@ -825,6 +825,7 @@ h3 {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin: -15px;
   }
 }
 
@@ -842,7 +843,8 @@ h3 {
 
 @media screen and (min-width: 768px) {
   .respons__item {
-    width: calc((100% - 30px) / 2);
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
   }
 }
 
