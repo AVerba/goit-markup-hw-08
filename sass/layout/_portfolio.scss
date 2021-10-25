@@ -23,7 +23,16 @@
     margin-left: calc(-1 * #{collection-gaps(card-set-gap)});
     margin-top: calc(-1 * #{collection-gaps(card-set-gap)});
     & > .item {
-      flex-basis: calc(100% / 3 - #{collection-gaps(card-set-gap)});
+      @include for-size(tablet) {
+        flex-basis: calc(100% / 2 - #{collection-gaps(card-set-gap)});
+      }
+      @include for-size(desktop) {
+        flex-basis: calc(100% / 3 - #{collection-gaps(card-set-gap)});
+      }
+
+
+
+      flex-basis: calc(100% / 1 - #{collection-gaps(card-set-gap)});
       margin-left: #{collection-gaps(card-set-gap)};
       margin-top: #{collection-gaps(card-set-gap)};
     }
