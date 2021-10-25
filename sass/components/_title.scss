@@ -1,9 +1,13 @@
 /*=========TITLE=============*/
 /* H1 */
 h1 {
-  @include font-modify(#ffff, 44, 900, 0.06em, 60);
+  @include font-modify(#ffff, 26, 900, 0.06em, 42);
   text-align: center;
   text-transform: uppercase;
+
+  @include for-size(desktop) {
+    @include font-modify(#ffff, 44, 900, 0.06em, 60);
+  }
 }
 /* H2 */
 .sub-title {

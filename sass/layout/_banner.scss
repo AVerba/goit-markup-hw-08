@@ -3,7 +3,12 @@
   background-color: collection-color(banner-bg-color);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/background.jpg");
   @include background-pos();
-  padding: 201px 0;
+  @include for-size(to-tablet) {
+    padding: 118px 0;
+  }
+  @include for-size(desktop) {
+    padding: 201px 0;
+  }
   text-align: center;
 
   @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
@@ -28,6 +33,9 @@
 
   // .banner__title
   &__title {
+    @include for-size(to-tablet) {
+      padding: 0 10%;
+    }
     padding: 0 23%;
     margin: 0 0 30px 0;
   }
