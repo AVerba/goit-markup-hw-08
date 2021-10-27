@@ -1262,8 +1262,14 @@ h3 {
   margin-bottom: 50px;
 }
 
-.portfolio__filter li + li {
-  margin-left: 8px;
+.portfolio__filter li:not(:last-child) {
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio__filter li:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
 
 .portfolio__list {

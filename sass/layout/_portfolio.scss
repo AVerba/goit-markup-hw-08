@@ -8,8 +8,11 @@
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
-    li + li {
-      margin-left: 8px;
+    li:not(:last-child) {
+      margin-right: 8px;
+      @include for-size(to-tablet) {
+        margin-bottom: 15px;
+      }
     }
   }
 
