@@ -1,51 +1,52 @@
 .footer {
   background-color: collection-color(footer-bg-color);
-  padding: 60px 0;
 
   // .footer_row
   &_row {
-    width: 100%;
-    margin: 0 auto;
-    @include for-size(tablet) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    @include for-size(desktop) {
+    text-align: center;
+    @include for-size(desctop){
       display: flex;
     }
+    
   }
 
   // .footer__contacts
   &__contacts {
-    margin-bottom: 60px;
-    text-align: center;
     font-style: normal;
-    /* padding: 0 0 60px 0; */
-    /* margin-right: 86px; */
-    @include for-size(tablet) {
-      margin-right: 186px;
+    @include for-size(desctop){
+      padding: 0 0 60px 0;
+      margin-right: 86px;
     }
+
   }
 
   // .footer__logo
   &__logo {
-    display: inline-block;
-    margin: 0 0 20px;
-    /* margin: 60px 0 20px 0; */
     span {
       color: #ffff;
     }
+    @include for-size(desctop){
+      margin: 60px 0 20px 0;
+    }
+    
+
   }
 
   // .footer__social
   &__social {
-    margin: 0 0 60px 0;
+    display: block;
+    text-align: center;
+    @include for-size(desctop){
+      margin: 71px 0 0 0;
+    }
+    
   }
 
   // .footer__form
   &__form {
-    margin: 71px 0 0 92px;
+    @include for-size(desctop){
+      margin: 71px 0 0 92px;
+    }
   }
 }
 .f-contacts {
@@ -63,16 +64,14 @@
 
   // .f-contacts__link
   &__link {
-    @include font-modify(
-      #{collection-color(social--link--color)},
-      14,
-      400,
-      0.03em,
-      24
-    );
+    @include font-modify(#{collection-color(social--link--color)}, 14, 400, 0.03em, 24);
     transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover {
       color: collection-color(action-color);
     }
   }
 }
+
+
+
+
