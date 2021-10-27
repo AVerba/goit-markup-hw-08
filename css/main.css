@@ -38,7 +38,7 @@ address {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-._flex-center, .subscr-email__btn, .social__list, .social__link, .team__content {
+._flex-center, .social__list, .social__link, .team__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -447,17 +447,13 @@ body {
   fill: #2196f3;
 }
 
-.subscr-email {
-  /* margin: 71px 0 0 92px; */
-}
-
 .subscr-email__title {
-  text-align: center;
   color: #ffff;
   margin-bottom: 20px;
 }
 
 .subscr-email__input {
+  width: 100%;
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -469,8 +465,7 @@ body {
   font-weight: 400;
   letter-spacing: 0.03em;
   line-height: calc(20 / 16);
-  width: 100%;
-  /* width: 358px; */
+  width: 358px;
   margin-right: 12px;
 }
 
@@ -1164,53 +1159,14 @@ h3 {
 
 .footer {
   background-color: #2f303a;
-  padding: 60px 0;
 }
 
 .footer_row {
-  width: 100%;
-  margin: 0 auto;
-}
-
-@media screen and (min-width: 768px) {
-  .footer_row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer_row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
+  text-align: center;
 }
 
 .footer__contacts {
-  margin-bottom: 60px;
-  text-align: center;
   font-style: normal;
-  /* padding: 0 0 60px 0; */
-  /* margin-right: 86px; */
-}
-
-@media screen and (min-width: 768px) {
-  .footer__contacts {
-    margin-right: 186px;
-  }
-}
-
-.footer__logo {
-  display: inline-block;
-  margin: 0 0 20px;
-  /* margin: 60px 0 20px 0; */
 }
 
 .footer__logo span {
@@ -1218,11 +1174,8 @@ h3 {
 }
 
 .footer__social {
-  margin: 0 0 60px 0;
-}
-
-.footer__form {
-  margin: 71px 0 0 92px;
+  display: block;
+  text-align: center;
 }
 
 .f-contacts__list {
