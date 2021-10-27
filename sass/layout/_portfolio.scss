@@ -30,8 +30,6 @@
         flex-basis: calc(100% / 3 - #{collection-gaps(card-set-gap)});
       }
 
-
-
       flex-basis: calc(100% / 1 - #{collection-gaps(card-set-gap)});
       margin-left: #{collection-gaps(card-set-gap)};
       margin-top: #{collection-gaps(card-set-gap)};
@@ -45,6 +43,11 @@
   }
 }
 .filter {
+  @include for-size(to-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
   // .filter__btn
   &__btn {
     @include font-modify(#212121, 16, 500, 0.03em, 26);
@@ -114,7 +117,13 @@
 
   // .item__group
   &__group {
-    @include font-modify(#{collection-color(common-text-color)}, 16, 400, 0.03em, 30);
+    @include font-modify(
+      #{collection-color(common-text-color)},
+      16,
+      400,
+      0.03em,
+      30
+    );
     padding: 0 0 20px 0;
   }
 }
