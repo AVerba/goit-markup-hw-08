@@ -6,6 +6,13 @@
   z-index: 1;
   border-bottom: 1px solid #cfc2c2;
   background-color: #ffff;
+  .container {
+    display: flex;
+    @include for-size(tablet) {
+      justify-content: center;
+      align-items: center;
+    }
+  }
 
   ._active {
     color: collection-color(action-color);
