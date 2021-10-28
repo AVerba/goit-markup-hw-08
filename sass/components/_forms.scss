@@ -7,6 +7,9 @@
   @include add-size(100%, 100%);
   background: rgba(0, 0, 0, 0.2);
   transition: opacity 0.2s;
+  @include for-size(mobile-only) {
+    padding: 20px 15px;
+}
 }
 
 .modal {
@@ -18,7 +21,16 @@
   // .modal__order
   &__order {
     @include сentering-xy(fixed);
-    @include add-size(528px, 581px);
+    
+    @include for-size(mobile) {
+      @include add-size(450px, 609px);
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  @include add-size(528px, 581px);
     background: #ffffff;
     box-shadow: collection-shadows(modal-shadow);
     border-radius: 4px;
