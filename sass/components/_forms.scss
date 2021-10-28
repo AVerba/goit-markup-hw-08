@@ -211,6 +211,9 @@
   // .subscr-email__input
   &__input {
     width: 100%;
+    @include for-size(to-desktop) {
+      margin-bottom: 20px;
+    }
     @include for-size(desktop) {
       width: 358px;
       margin-right: 12px;
