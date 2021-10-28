@@ -38,7 +38,7 @@ address {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-._flex-center, .social__list, .social__link, .team__content {
+._flex-center, .subscr-email__btn, .social__list, .social__link, .team__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -447,6 +447,12 @@ body {
   fill: #2196f3;
 }
 
+@media screen and (min-width: 1200px) {
+  .subscr-email {
+    margin: 71px 0 0 92px;
+  }
+}
+
 .subscr-email__title {
   color: #ffff;
   margin-bottom: 20px;
@@ -465,8 +471,13 @@ body {
   font-weight: 400;
   letter-spacing: 0.03em;
   line-height: calc(20 / 16);
-  width: 358px;
-  margin-right: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .subscr-email__input {
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 
 .subscr-email__input::-webkit-input-placeholder {
@@ -503,10 +514,23 @@ body {
   font-weight: 700;
   letter-spacing: 0.06em;
   line-height: calc(30 / 16);
+  margin: 0 auto;
 }
 
 .subscr-email__btn:active {
   background-color: #188ce8;
+}
+
+@media screen and (min-width: 768px) {
+  .subscr-email__btn {
+    /*   */
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscr-email__btn {
+    /*   */
+  }
 }
 
 .subscr-email__icon {
@@ -1165,33 +1189,49 @@ h3 {
   text-align: center;
 }
 
-.footer__contacts {
-  font-style: normal;
+@media screen and (min-width: 1200px) {
+  .footer_row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .footer__logo span {
   color: #ffff;
 }
 
-.footer__social {
-  display: block;
-  text-align: center;
+@media screen and (min-width: 1200px) {
+  .footer__logo {
+    margin: 60px 0 20px 0;
+  }
 }
 
-.f-contacts__list {
-  padding: 0;
+.footer__contacts {
+  font-style: normal;
 }
 
-.f-contacts__list li {
-  display: block;
-  margin: 0 0 9px 0;
+@media screen and (min-width: 1200px) {
+  .footer__contacts {
+    padding: 0 0 60px 0;
+    margin-right: 86px;
+  }
 }
 
-.f-contacts__list li:last-child {
-  margin: 0;
+@media screen and (min-width: 1200px) {
+  .footer .f-contacts__list {
+    padding: 0;
+  }
+  .footer .f-contacts__list li {
+    display: block;
+    margin: 0 0 9px 0;
+  }
+  .footer .f-contacts__list li:last-child {
+    margin: 0;
+  }
 }
 
-.f-contacts__link {
+.footer .f-contacts__link {
   color: #afb1b8;
   font-size: 14px;
   font-weight: 400;
@@ -1201,8 +1241,25 @@ h3 {
   transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.f-contacts__link:hover {
+.footer .f-contacts__link:hover {
   color: #2196f3;
+}
+
+.footer__social {
+  display: block;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__social {
+    margin: 71px 0 0 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__form {
+    margin: 71px 0 0 92px;
+  }
 }
 
 .portfolio__filter {
