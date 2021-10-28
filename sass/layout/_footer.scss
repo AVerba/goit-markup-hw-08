@@ -3,6 +3,7 @@
 
   // .footer_row
   &_row {
+    padding: 60px 0;
     text-align: center;
     @include for-size(desktop) {
       display: flex;
@@ -11,7 +12,9 @@
   // .footer__logo
   &__logo {
     span {
+      display: inline-block;
       color: #ffff;
+      margin-bottom: 20px;
     }
     @include for-size(desktop) {
       margin: 60px 0 20px 0;
@@ -20,6 +23,10 @@
   // .footer__contacts
   &__contacts {
     font-style: normal;
+    @include for-size(to-tablet) {
+      margin-bottom: 60px;
+    }
+
     @include for-size(desktop) {
       padding: 0 0 60px 0;
       margin-right: 86px;
