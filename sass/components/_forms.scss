@@ -9,7 +9,7 @@
   transition: opacity 0.2s;
   @include for-size(mobile-only) {
     padding: 20px 15px;
-}
+  }
 }
 
 .modal {
@@ -21,20 +21,19 @@
   // .modal__order
   &__order {
     @include сentering-xy(fixed);
-    
-    @include for-size(mobile) {
-      @include add-size(450px, 609px);
-
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-  }
-  @include add-size(528px, 581px);
+    @include add-size(450px, 609px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: #ffffff;
     box-shadow: collection-shadows(modal-shadow);
     border-radius: 4px;
     padding: 40px 40px;
+
+    @include for-size(tablet) {
+      @include add-size(528px, 581px);
+    }
   }
 
   // .modal__form
@@ -128,7 +127,12 @@
 
   // .form__label--checkbox
   &__label--checkbox {
-    @include font-modify(#757575, 14, 400, 0.03em, 24);
+    @include font-modify(#757575, 12, 400, 0.03em, 14);
+
+    @include for-size(tablet) {
+      @include font-modify(#757575, 14, 400, 0.03em, 24);
+    }
+
     cursor: pointer;
     &::before {
       content: " ";
@@ -176,7 +180,18 @@
 }
 .checkbox-link {
   display: inline;
-  @include font-modify(#{collection-color(action-color)}, 14, 400, 0.03em, 24);
+  @include font-modify(#{collection-color(action-color)}, 12, 400, 0.03em, 14);
+
+  @include for-size(tablet) {
+    @include font-modify(
+      #{collection-color(action-color)},
+      14,
+      400,
+      0.03em,
+      24
+    );
+  }
+
   text-decoration-line: underline;
 }
 
