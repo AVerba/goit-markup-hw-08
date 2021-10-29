@@ -2,7 +2,13 @@
   width: $width;
   height: $height;
 }
-@mixin font-modify($color, $fontSize, $fontWeight, $letterSpacing, $lineHeight) {
+@mixin font-modify(
+  $color,
+  $fontSize,
+  $fontWeight,
+  $letterSpacing,
+  $lineHeight
+) {
   color: $color;
   font-size: #{$fontSize}px;
   font-weight: $fontWeight;
@@ -56,7 +62,7 @@
 }
 
 @mixin for-size($range) {
-  @if $range==mobile-only {
+  @if $range==to-mobile {
     @media screen and (max-width: #{$mobile - 1}) {
       @content;
     }

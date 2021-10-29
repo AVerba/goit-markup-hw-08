@@ -247,12 +247,6 @@ body {
   transition: opacity 0.2s;
 }
 
-@media screen and (max-width: 479px) {
-  ._backdrop {
-    padding: 20px 15px;
-  }
-}
-
 .modal_container {
   margin: 0 auto;
 }
@@ -263,8 +257,12 @@ body {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -272,15 +270,10 @@ body {
   padding: 40px 40px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .modal__order {
-    width: 450px;
-    height: 609px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    width: 528px;
+    height: 581px;
   }
 }
 
@@ -373,11 +366,21 @@ body {
 
 .form__label--checkbox {
   color: #757575;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.03em;
-  line-height: calc(24 / 14);
+  line-height: calc(14 / 12);
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .form__label--checkbox {
+    color: #757575;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    line-height: calc(24 / 14);
+  }
 }
 
 .form__label--checkbox::before {
@@ -462,12 +465,22 @@ body {
 .checkbox-link {
   display: inline;
   color: #2196f3;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.03em;
-  line-height: calc(24 / 14);
+  line-height: calc(14 / 12);
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .checkbox-link {
+    color: #2196f3;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    line-height: calc(24 / 14);
+  }
 }
 
 .btn-close {
