@@ -1386,6 +1386,12 @@ h3 {
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .footer__subscriptoin-email {
+    margin-top: 60px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .footer__subscriptoin-email {
     /*  margin: 71px 0 0 0; */

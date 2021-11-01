@@ -83,6 +83,9 @@
 
   // .footer__subscriptoin-email
   &__subscriptoin-email {
+    @include for-size(to-desktop) {
+      margin-top: 60px;
+    }
     @include for-size(desktop) {
       /*  margin: 71px 0 0 0; */
       margin-left: auto;
