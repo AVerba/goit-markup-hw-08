@@ -119,6 +119,7 @@
   // .subscr-email__input
   &__input {
     width: 100%;
+    margin-bottom: 20px;
     @include for-size(tablet) {
       width: 450px;
       margin-bottom: 20px;
