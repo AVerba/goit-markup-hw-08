@@ -8,7 +8,7 @@
       margin-bottom: 20px;
     }
     @include for-size(desktop) {
-      margin: 60px 0 20px 0;
+      margin: 0 0 0 0;
     }
   }
 
@@ -16,6 +16,11 @@
   &_row {
     padding: 60px 0;
     text-align: center;
+    @include for-size(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     @include for-size(desktop) {
       display: flex;
     }
@@ -27,9 +32,12 @@
     @include for-size(to-tablet) {
       margin-bottom: 60px;
     }
+    @include for-size(tablet) {
+      margin-right: 165px;
+    }
 
     @include for-size(desktop) {
-      padding: 0 0 60px 0;
+      /* padding: 0 0 60px 0; */
       margin-right: 86px;
     }
   }
@@ -69,14 +77,14 @@
     display: block;
     text-align: center;
     @include for-size(desktop) {
-      margin: 71px 0 0 0;
+      /* margin: 71px 0 0 0; */
     }
   }
 
   // .footer__subscriptoin-email
   &__subscriptoin-email {
     @include for-size(desktop) {
-      margin: 71px 0 0 0;
+      /*  margin: 71px 0 0 0; */
       margin-left: auto;
     }
   }

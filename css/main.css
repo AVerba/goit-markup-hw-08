@@ -1295,13 +1295,26 @@ h3 {
 
 @media screen and (min-width: 1200px) {
   .footer__logo {
-    margin: 60px 0 20px 0;
+    margin: 0 0 0 0;
   }
 }
 
 .footer_row {
   padding: 60px 0;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer_row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1322,9 +1335,15 @@ h3 {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .footer__contacts {
+    margin-right: 165px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .footer__contacts {
-    padding: 0 0 60px 0;
+    /* padding: 0 0 60px 0; */
     margin-right: 86px;
   }
 }
@@ -1363,13 +1382,13 @@ h3 {
 
 @media screen and (min-width: 1200px) {
   .footer__social {
-    margin: 71px 0 0 0;
+    /* margin: 71px 0 0 0; */
   }
 }
 
 @media screen and (min-width: 1200px) {
   .footer__subscriptoin-email {
-    margin: 71px 0 0 0;
+    /*  margin: 71px 0 0 0; */
     margin-left: auto;
   }
 }
