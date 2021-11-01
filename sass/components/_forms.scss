@@ -232,6 +232,9 @@
 
   // .subscr-email__form
   &__form {
+    @include for-size(desktop) {
+      display: flex;
+    }
   }
 
   // .subscr-email__field

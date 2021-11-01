@@ -611,6 +611,14 @@ body {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 1200px) {
+  .subscr-email__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .subscr-email__input {
   width: 100%;
   background-color: rgba(0, 0, 0, 0);
