@@ -164,8 +164,8 @@ address {
   color: #212121;
   /* padding: 15px; */
   z-index: 10;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
   -webkit-transition: -webkit-transform 300ms ease-in-out;
   transition: -webkit-transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out;
