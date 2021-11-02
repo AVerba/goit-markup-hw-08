@@ -47,7 +47,7 @@
     color: #212121;
   }
 
-  transform: translateY(-100%);
+  transform: translateY(-200%);
   transition: transform 300ms ease-in-out;
   &.is-open {
     transform: translateY(0);
