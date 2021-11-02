@@ -1,5 +1,4 @@
 .menu-toggle {
- 
   min-height: 40px;
   min-width: 40px;
   display: flex;
@@ -31,8 +30,11 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  padding: 10px 41px;
+  padding: 48px 41px;
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #fff;
   color: #212121;
   /* padding: 15px; */
@@ -53,14 +55,11 @@
 }
 
 .mobile-menu {
-  margin: 39px 0 150px 0;
-  &__item+ &__item{
+  margin-top: 39px;
+  &__item + &__item {
     margin-top: 35px;
   }
-  
-  @include for-size(mobile) {
-    margin-bottom: 302px;
-  } 
+
   &__link {
     @include font-modify(#212121, 40, 500, 0.02em, 47);
   }
@@ -74,70 +73,59 @@
 
 .mobile-contacts {
   margin-bottom: 20px;
-  li + li{
+  li + li {
     margin-top: 10px;
     @include for-size(mobile) {
       margin-top: 32px;
     }
   }
-  
+
   @include for-size(mobile) {
     margin-bottom: 64px;
   }
 
-
   // .mobile-contacts__link
 
-  &__link{
+  &__link {
     @include font-modify(#757575, 26, 500, 0.02em, 32);
     @include for-size(mobile) {
       @include font-modify(#757575, 34, 500, 0.02em, 40);
     }
-    &--mail{
+    &--mail {
       @include font-modify(#757575, 24, 500, 0.02em, 28);
-    }    
+    }
   }
 }
 .mobile-social {
-  display: flex;/* 
+  display: flex; /* 
   justify-content: space-around; */
 
   color: collection-color(action-color);
-  
-  
+
   @include for-size(mobile) {
-    
   }
-  &__item{
+  &__item {
     display: flex;
     align-items: center;
   }
-  &__item::after{
-
+  &__item::after {
   }
-  &__item + &__item{
+  &__item + &__item {
     /* margin-left: 20px; */
   }
-  &__item + &__item::before{
+  &__item + &__item::before {
     content: "";
     width: 22px;
     height: 0px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     transform: rotate(90deg);
-  }  
+  }
 
   // .mobile-social__link
   &__link {
-    @include font-modify(#2196F3, 18, 500, 0.02em, 22);
+    @include for-size(to-mobile) {
+      @include font-modify(#2196f3, 11, 500, 0.02em, 22);
+    }
+    @include font-modify(#2196f3, 18, 500, 0.02em, 22);
   }
-
 }
-
-
-
-
-
-
-
-
-
