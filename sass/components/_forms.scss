@@ -30,6 +30,9 @@
     box-shadow: collection-shadows(modal-shadow);
     border-radius: 4px;
     padding: 40px 40px;
+    @include for-size(to-mobile) {
+      padding: 15px 40px;
+    }
     @include for-size(mobile) {
       @include add-size(450px, 609px);
     }
@@ -46,6 +49,9 @@
   }
 
   // .modal__title
+  @include for-size(to-mobile) {
+    @include font-modify(#212121, 17, 700, 0.03em, 20);
+  }
   &__title {
     @include font-modify(#212121, 20, 700, 0.03em, 23);
     text-align: center;
@@ -164,6 +170,9 @@
 }
 
 .comment {
+  @include for-size(to-mobile) {
+    @include add-size(100%, 70px);
+  }
   @include add-size(100%, 120px);
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -174,6 +183,9 @@
     @include font-modify(rgba(117, 117, 117, 0.5), 12, 400, 0.01em, 14);
   }
   & ~ .form__label {
+    @include for-size(to-mobile) {
+      top: -77px;
+    }
     top: -124px;
   }
   &:focus {
