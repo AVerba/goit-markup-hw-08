@@ -97,6 +97,11 @@
     position: absolute;
     top: 0;
     left: 0;
+    @include for-size(to-mobile) {
+      @include font-modify(#ffff, 12, 400, 0.03em, 26);
+      padding: 38px 24px;
+    }
+
     @include add-size(100%, 100%);
     background: rgba(33, 150, 243, 0.9);
     @include font-modify(#ffff, 18, 400, 0.03em, 28);
