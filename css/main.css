@@ -689,10 +689,10 @@ h3 {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (max-width: 767px) {
-  .social {
-    margin-bottom: 60px;
-  }
+.social {
+  /*   @include for-size(to-tablet) {
+     margin-bottom: 60px;
+  } */
 }
 
 .social__title {
